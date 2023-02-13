@@ -23,7 +23,7 @@ def convert(message):
     try:
         values = message.text.split(' ')
         if len(values) != 3:
-            raise ConvertionException('cлишком много параметров')
+            raise ConvertionException('неверное кол-во параметров')
 
         quote, base, amount = values
         total_base = CryptoConverter.get_price(quote, base, amount)
